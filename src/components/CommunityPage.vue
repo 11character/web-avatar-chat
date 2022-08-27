@@ -11,7 +11,7 @@
         <div
           v-for="(comment, i) in list"
           :key="i"
-          :style="{ backgroundColor: comment.bgColor }"
+          :style="{ backgroundColor: comment.bgColor, marginLeft: comment.depth ? '4rem' : 0}"
           @mouseover="onMouseOverComment(comment, i)"
           class="comment"
         >

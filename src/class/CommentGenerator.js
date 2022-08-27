@@ -53,11 +53,20 @@ export default class CommentGenerator {
   ];
 
   static getList(length = 0) {
-    const arr = new Array(length).fill(0).map(() => {
+    const arr = new Array(length).fill(0).map((val, i) => {
       const uIndex = Math.floor(Math.random() * CommentGenerator.userArr.length);
       const mIndex = Math.floor(Math.random() * CommentGenerator.messageArr.length);
 
-      return new Comment({ ...CommentGenerator.userArr[uIndex], message: CommentGenerator.messageArr[mIndex] });
+      return new Comment({ ...CommentGenerator.userArr[uIndex], message: CommentGenerator.messageArr[mIndex], id: i });
+    });
+
+    arr.forEach((val, i) => {
+      const rNum = Math.floor(Math.random() * 2);
+
+      if (i != 0 && rNum == 0) {
+        val.depth = 1;
+        val.targetComment = arr[i - 1].targetComment;
+      }
     });
 
     return arr;
