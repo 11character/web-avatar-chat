@@ -1,0 +1,56 @@
+<template>
+  <header class="header">
+    <label>
+      <input v-model="style" type="radio" name="chatStyle" value="0"/>
+      <span>일반</span>
+    </label>
+
+    <label>
+      <input v-model="style" type="radio" name="chatStyle" value="1"/>
+      <span>댓글뷰어1</span>
+    </label>
+
+    <label>
+      <input v-model="style" type="radio" name="chatStyle" value="2"/>
+      <span>댓글뷰어2</span>
+    </label>
+  </header>
+  <div class="body">
+    <slot></slot>
+  </div>
+  <footer class="footer">
+
+  </footer>
+</template>
+
+<script>
+export default {
+  name: 'MainLayout',
+  emits: ['styleChange'],
+  data() {
+    return {
+      style: 0,
+    };
+  },
+  watch: {
+    style(val) {
+      this.$emit('styleChange', parseInt(val, 10));
+    }
+  }
+}
+</script>
+
+<style scoped>
+  .header {
+    width: 100%;
+    background-color: antiquewhite;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+
+  .header > label {
+    margin-right: 2rem;
+  }
+</style>

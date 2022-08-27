@@ -1,26 +1,28 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <MainLayoutVue @styleChange="onStyleChange">
+    <CommunityPageVue :chat-style="style"/>
+  </MainLayoutVue>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MainLayoutVue from '@/components/layout/MainLayout.vue';
+import CommunityPageVue from '@/components/CommunityPage.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    MainLayoutVue,
+    CommunityPageVue,
+  },
+  data() {
+    return {
+      style: 0,
+    };
+  },
+  methods: {
+    onStyleChange(val) {
+      this.style = val;
+    }
   }
-}
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
