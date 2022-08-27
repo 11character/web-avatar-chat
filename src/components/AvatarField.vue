@@ -86,7 +86,7 @@ export default {
 .field {
   box-sizing: border-box;
   width: 100%;
-  height: 90vh;
+  height: 80vh;
   padding: 1rem;
   overflow: hidden;
 }
@@ -135,8 +135,7 @@ export default {
 
   position: absolute;
   left: 0;
-  right: 0;
-  bottom: 100px;
+  bottom: 0;
 
   word-break: break-all;
   font-weight: bold;

@@ -107,7 +107,8 @@ export default {
 .sticky-field {
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
+  top: 10vh;
   width: 100%;
+  overflow: hidden;
 }
 </style>

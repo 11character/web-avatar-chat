@@ -42,6 +42,7 @@ export default {
 
 <style scoped>
   .header {
+    box-sizing: border-box;
     width: 100%;
     background-color: antiquewhite;
     padding: 1rem;
