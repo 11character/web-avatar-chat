@@ -109,7 +109,7 @@ img {
 .field {
   box-sizing: border-box;
   width: 100%;
-  height: 50vh;
+  height: 60vh;
   padding: 1rem;
   overflow: hidden;
 }
