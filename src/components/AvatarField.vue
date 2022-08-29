@@ -61,7 +61,7 @@ export default {
       this.isShow = false;
 
       if (nVal) {
-        this.bgColor = nVal.bgColor;
+        this.bgColor = nVal.targetComment.bgColor;
         this.speech = this.comment.message;
       } else {
         this.bgColor = null;
@@ -109,7 +109,7 @@ img {
 .field {
   box-sizing: border-box;
   width: 100%;
-  height: 80vh;
+  height: 50vh;
   padding: 1rem;
   overflow: hidden;
 }

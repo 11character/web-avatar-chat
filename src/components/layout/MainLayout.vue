@@ -44,6 +44,7 @@ export default {
   .header {
     box-sizing: border-box;
     width: 100%;
+    height: 60px;
     background-color: antiquewhite;
     padding: 1rem;
     position: sticky;
