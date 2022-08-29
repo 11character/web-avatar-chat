@@ -50,6 +50,9 @@ export default {
     position: sticky;
     top: 0;
     z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .header > label {
